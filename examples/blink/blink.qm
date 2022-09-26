@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model version="4.0.3" links="0">
+ <framework name="qpc"/>
+ <package name="AOs" stereotype="0x02">
+  <class name="blink" superclass="qpc::QActive">
+   <statechart>
+    <initial target="../1">
+     <initial_glyph conn="15,4,5,0,9,4">
+      <action box="0,-2,10,2"/>
+     </initial_glyph>
+    </initial>
+    <state name="Led_StateOn">
+     <tran trig="EFSM_EVT_TICK">
+      <action brief="timeCount++"/>
+      <choice target="../../../2">
+       <guard brief="timeCount&gt;2000"/>
+       <choice_glyph conn="31,20,4,0,10">
+        <action box="1,0,15,2"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="19,20,3,-1,12">
+       <action box="0,-2,13,4"/>
+      </tran_glyph>
+     </tran>
+     <tran trig="EFSM_EVT_ENTRY">
+      <action brief="timeCount=0"/>
+      <tran_glyph conn="19,14,3,-1,10">
+       <action box="0,-2,16,4"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="19,8,31,16"/>
+    </state>
+    <state name="Led_StateOff">
+     <tran trig="EFSM_EVT_TICK">
+      <action brief="timeCount++"/>
+      <choice target="../../../1">
+       <guard brief="timeCount&gt;2000"/>
+       <choice_glyph conn="42,42,4,2,-18">
+        <action box="-5,1,13,2"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="19,42,3,-1,23">
+       <action box="0,-2,13,4"/>
+      </tran_glyph>
+     </tran>
+     <tran trig="EFSM_EVT_ENTRY">
+      <action brief="timeCount=0"/>
+      <tran_glyph conn="19,36,3,-1,10">
+       <action box="0,-2,16,4"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="19,30,31,16"/>
+    </state>
+    <state_diagram size="61,57"/>
+   </statechart>
+  </class>
+ </package>
+</model>

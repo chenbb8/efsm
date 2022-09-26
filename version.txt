@@ -1,0 +1,14 @@
+v0.03@2022/09/23
+函数Efsm_Trans()增加对state参数校验
+增加临界区保护
+增加状态注册函数Efsm_Regist()
+增加linux_gcc编译的blink例子
+增加注释
+修改目录结构
+
+v0.02@2022/04/14
+宏_BIT_OFFSET()改为_EFSM_USER_BIT()
+修改EFSM_EVT_ENTRY、EFSM_EVT_EXIT、EFSM_EVT_COMMON宏的取值
+
+v0.01@2022/04/10
+实现基础的函数指针有限状态机框架

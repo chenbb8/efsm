@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1663847279 source:d:\gjs代码\efsm_0_3\efsm\efsm.c
+	<stdint.h>
+	<stdio.h>
+	<stdbool.h>
+	"efsm.h"
+	"efsm_hal.h"
+
+1663847305 d:\gjs代码\efsm_0_3\efsm\efsm.h
+	"efsm_config.h"
+
+1663845943 d:\gjs代码\efsm_0_3\efsm\efsm_config.h
+
+1663845779 d:\gjs代码\efsm_0_3\efsm\efsm_hal.h
+	"efsm_config.h"
+
+1663845621 source:d:\gjs代码\efsm_0_3\efsm\efsm_hal.c
+	"stdio.h"
+	"efsm_hal.h"
+
+1663856105 source:d:\gjs代码\efsm_0_3\examples\blink\codeblocks\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<windows.h>
+	"efsm.h"
+
